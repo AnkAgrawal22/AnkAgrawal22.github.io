@@ -355,26 +355,35 @@
 <!-- REMOVED SORTING VISUALIZER AND RESEARCH SECTIONS -->
 
 <div class="section" id="resume" style="text-align: center;">
-    <h3 class="section-title">
-        Resume <i class="material-icons title-icon">description</i>
-    </h3>
-
-    <br>
-
-    <div class="resume-view-container" style="max-width: 900px; margin: 0 auto; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
-        <iframe 
-            src="img/Resume.pdf#toolbar=0" 
-            width="100%" 
-            height="800px" 
-            style="border: none; display: block;"
-        ></iframe>
+    <h3 class="section-title">Professional Dossier <i class="material-icons title-icon">description</i></h3>
+    
+    <div class="row" style="display: flex; flex-wrap: wrap; align-items: stretch; margin-top: 30px;">
+        <div class="col s12 m4">
+            <div class="card-panel grey darken-4 white-text" style="height: 100%; border-radius: 12px; border: 1px solid var(--primary-light); text-align: left; padding: 25px;">
+                <h5 style="color: var(--primary-light); margin-bottom: 20px;">Strategic Summary</h5>
+                <p style="font-size: 0.9rem; line-height: 1.6;">
+                    • <b>Actuarial CS1/CS2</b> proficiency.<br>
+                    • <b>Agentic AI</b> development experience.<br>
+                    • <b>MQ University</b> graduate excellence.<br>
+                </p>
+                <div style="margin-top: 30px;">
+                    <a href="img/Resume.pdf" target="_blank" class="btn cyan waves-effect waves-light" style="width: 100%; border-radius: 8px;">
+                        <i class="material-icons left">cloud_download</i> Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m8">
+            <div class="resume-view-container" style="max-width: 900px; margin: 0 auto; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 12px; overflow: hidden; height: 500px; position: relative; background: #1c1f33;">
+                <div id="n-resume-placeholder" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 5;">
+                    <i class="material-icons" style="font-size: 3rem; color: var(--primary-light);">visibility</i>
+                    <p style="margin-top: 10px;">Embedded PDF Viewer</p>
+                    <button onclick="loadNResume()" class="btn-small cyan" style="margin-top: 15px; border-radius: 4px;">Load Preview</button>
+                </div>
+                <iframe id="n-resume-iframe" src="" width="100%" height="100%" style="border: none; display: none;"></iframe>
+            </div>
+        </div>
     </div>
-
-    <br>
-
-    <a href="img/Resume.pdf" target="_blank" class="btn-large waves-effect waves-light cyan" style="margin-top: 20px;">
-        <i class="material-icons left">open_in_new</i> View Full Screen
-    </a>
 </div>
 
         
@@ -424,6 +433,13 @@
             backSpeed: 30,
             loop: true
         });
+
+        function loadNResume() {
+            document.getElementById('n-resume-placeholder').style.display = 'none';
+            const iframe = document.getElementById('n-resume-iframe');
+            iframe.src = "img/Resume.pdf#toolbar=0";
+            iframe.style.display = 'block';
+        }
     </script>
 </body>
 </html>
