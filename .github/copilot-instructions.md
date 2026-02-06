@@ -20,7 +20,7 @@ This is a single-page professional portfolio for Ank Agrawal, an Actuarial Pract
 - **Resume Integration**: Embedded via `<iframe>` with `#toolbar=0` in the `src` to provide a clean, integrated PDF viewing experience.
 
 ## Critical Workflows
-- **GitHub Authentication**: If prompted, use `git push` to trigger the browser login popup (Git Credential Manager). Alternatively, use GitHub CLI: `gh auth login`.
+- **GitHub Authentication**: Use SSH key for authentication when pushing to GitHub.
 - **Deployment**: Pushing to `main` branch triggers an automatic build/deploy on GitHub Pages.
 - **Rebranding History**: The project was transitioned from a "Shubham" template. Avoid any logic relating to sorting visualizers or original audio clips as they have been sanitized.
 
