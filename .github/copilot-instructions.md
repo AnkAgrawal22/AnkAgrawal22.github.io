@@ -6,7 +6,7 @@ This is a single-page professional portfolio for Ank Agrawal, an Actuarial Pract
 ## Tech Stack
 - **Frontend**: HTML5, Materialize CSS (Framework), FontAwesome 6, Material Icons.
 - **Animations**: Typed.js for dynamic hero text.
-- **Deployment**: GitHub Pages (User Site: `AnkAgrawal22.github.io`).
+- **Deployment**: GitHub Pages (User Site: `ank-actuary.github.io`).
 
 ## Architecture & Conventions
 - **Single Page Structure**: The entire site lives in `index.html`. Do not split into multiple pages unless requested.
