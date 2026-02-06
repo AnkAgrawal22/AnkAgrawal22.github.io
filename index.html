@@ -172,6 +172,10 @@
                     <span style="display: flex; align-items: center; gap: 4px;"><i class="material-icons" style="font-size: 1rem; color: var(--accent-glow);">place</i> Sydney, Australia</span>
                 </span>
             </div>
+            
+            <!-- Mobile Menu Trigger -->
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger right" style="margin: 0;"><i class="material-icons">menu</i></a>
+
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
@@ -181,6 +185,16 @@
             </ul>
         </div>
     </nav>
+
+    <!-- Mobile Sidenav -->
+    <ul class="sidenav" id="mobile-nav" style="background-color: var(--bg-dark); border-right: 1px solid var(--glass-border);">
+        <li style="padding: 20px;"><span class="gradient-text" style="font-size: 1.5rem; font-weight: 800;">ANK.</span></li>
+        <li><a href="#about" class="white-text sidenav-close">About</a></li>
+        <li><a href="#experience" class="white-text sidenav-close">Experience</a></li>
+        <li><a href="#projects" class="white-text sidenav-close">Projects</a></li>
+        <li><a href="#skills" class="white-text sidenav-close">Skills</a></li>
+        <li><a href="#resume" class="white-text sidenav-close">Resume</a></li>
+    </ul>
 
     <!-- Hero -->
     <div class="hero">
@@ -395,6 +409,9 @@
     <script>
         $(document).ready(function(){
             $('.scrollspy').scrollSpy();
+            $('.sidenav').sidenav({
+                edge: 'right'
+            });
             
             // Modern Typed.js config
             $("#typed").typed({
